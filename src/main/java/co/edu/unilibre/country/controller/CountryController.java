@@ -21,7 +21,7 @@ public class CountryController {
 	@Autowired
 	private ICountryService countryService;
 	
-	@GetMapping("/list")
+	@GetMapping("/list-country")
 	public List<Country> getList(){
 		return countryService.getAllList().stream().map(country -> {
 			country.setPort(port);
