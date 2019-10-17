@@ -24,7 +24,6 @@ public class CountryController {
 	@GetMapping("/list-country")
 	public List<Country> getList(){
 		return countryService.getAllList().stream().map(country -> {
-			country.setPort(port);
 			return country;
 		}).collect(Collectors.toList());
 	}
@@ -32,7 +31,6 @@ public class CountryController {
 	@GetMapping("/{id}")
 	public Country getById(@PathVariable Long id) {
 		Country country = countryService.getById(id);
-		country.setPort(port);
 		return country;
 		
 	}

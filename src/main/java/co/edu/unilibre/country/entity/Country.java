@@ -40,14 +40,6 @@ public class Country implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public Long getPort() {
-		return port;
-	}
-
-	public void setPort(Long port) {
-		this.port = port;
-	}
 	
 	
 }
